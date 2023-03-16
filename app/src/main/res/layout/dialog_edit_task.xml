@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:background="@drawable/bg_round_corner_left_right"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvEmployeeList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bg_round_corner"
+            android:gravity="bottom"
+            android:scrollbars="vertical"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/text_light_gray"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="12dp"
+            android:paddingTop="5dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="5dp">
+
+            <cheetah.alphacapital.textutils.CustomEditText
+                android:id="@+id/edtTaskName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:ellipsize="end"
+                android:focusableInTouchMode="true"
+                android:gravity="center|left"
+                android:hint="Add Task.."
+                android:importantForAutofill="noExcludeDescendants"
+                android:inputType="textMultiLine"
+                android:textColor="@color/black"
+                android:textColorHint="@color/text_dark_gray"
+                android:textSize="16sp" />
+
+            <cheetah.alphacapital.textutils.CustomTextViewRegular
+                android:id="@+id/txtClientName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <cheetah.alphacapital.textutils.CustomTextViewRegular
+                android:id="@+id/txtAddReminder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp"
+                android:gravity="right"
+                android:text="04 Feb 2019 10:14 PM"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivSetReminder"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:padding="4dp"
+                android:tint="@color/blue_new"
+                android:src="@drawable/ic_schedule_blue" />
+
+            <ImageView
+                android:id="@+id/ivAddClient"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="4dp"
+                android:padding="4dp"
+                android:tint="@color/blue_new"
+                android:src="@drawable/ic_user_multiple"
+                android:visibility="gone" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <cheetah.alphacapital.textutils.CustomTextViewRegular
+                android:id="@+id/txtAddTask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="5dp"
+                android:gravity="right"
+                android:padding="6dp"
+                android:text="Save"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

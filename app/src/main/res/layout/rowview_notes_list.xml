@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:text="Test Task No.3 @PratikKalariya  demo4 edited"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/regular"
+                android:text="Oct 12, 2019 02:17:PM"
+                android:textColor="@color/text_hint"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:padding="3dp"
+            android:src="@drawable/t_delete" />
+
+        <ImageView
+            android:id="@+id/ivEdit"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:padding="3dp"
+            android:visibility="visible"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/ic_edit_while" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewline"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/text_disabled" />
+
+</LinearLayout>
+
+

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:id="@+id/llClientDetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="?attr/selectableItemBackground"
+                        android:orientation="horizontal"
+                        android:padding="3dp">
+
+                        <cheetah.alphacapital.textutils.CustomTextViewRegular
+                            android:id="@+id/txtName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ravi Patel"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                            android:id="@+id/txtOrganization"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="1"
+                            android:text="(Ravi Patel)"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/text_dark_gray" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <cheetah.alphacapital.textutils.CustomTextViewLight
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Meeting"
+                            android:textColor="@color/text_dark_gray"
+                            android:textSize="14sp" />
+
+                        <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                            android:id="@+id/txtMeetingTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="10"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/text_disabled" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <cheetah.alphacapital.textutils.CustomTextViewLight
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="AUM"
+                            android:textColor="@color/text_dark_gray"
+                            android:textSize="14sp" />
+
+                        <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                            android:id="@+id/txtAUMTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="10"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/text_disabled" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <cheetah.alphacapital.textutils.CustomTextViewLight
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SIP"
+                            android:textColor="@color/text_dark_gray"
+                            android:textSize="14sp" />
+
+                        <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                            android:id="@+id/txtSIP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="10"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0.5dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/text_disabled" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <cheetah.alphacapital.textutils.CustomTextViewLight
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Inflow / Outflow"
+                            android:textColor="@color/text_dark_gray"
+                            android:textSize="14sp" />
+
+                        <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                            android:id="@+id/txtInflowOutflow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="10"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="16sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_time_gray" />
+
+                    <cheetah.alphacapital.textutils.CustomTextViewLight
+                        android:id="@+id/txtPunchingHours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:text=""
+                        android:textColor="@color/text_dark_gray"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:src="@drawable/ic_user_multiple_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:orientation="vertical">
+
+                        <cheetah.alphacapital.textutils.CustomTextViewLight
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Collaborative Employee :"
+                            android:textColor="@color/text_dark_gray"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                        <cheetah.alphacapital.textutils.CustomTextViewLight
+                            android:id="@+id/txtCollaborativeEmployee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/text_dark_gray"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgInfo"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="top|right"
+                android:layout_margin="10dp"
+                android:padding="2dp"
+                android:src="@drawable/ic_info_gray"
+                android:visibility="gone" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/text_disabled" />
+
+</LinearLayout>

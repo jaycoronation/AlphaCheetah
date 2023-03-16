@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/llNoInternet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                android:background="@drawable/ic_no_internet" />
+
+            <cheetah.alphacapital.textutils.CustomTextViewMedium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="Oh no!"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+
+            <cheetah.alphacapital.textutils.CustomTextViewMedium
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No internet connection\nCheck your connection and try again !"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/llRetry"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_selector_reverse"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtRetry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/medium"
+                    android:text="RETRY"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

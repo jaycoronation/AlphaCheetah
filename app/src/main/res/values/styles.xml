@@ -1,0 +1,97 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="myAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@android:color/black</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--   <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>-->
+
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/white</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    </style>
+
+    <style name="ProgressBar" parent="Base.Widget.AppCompat.ProgressBar">
+        <item name="colorAccent">@color/white</item>
+    </style>
+
+    <style name="ProgressBarReverse" parent="Base.Widget.AppCompat.ProgressBar">
+        <item name="colorAccent">@color/blue_new</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!-- edittext style -->
+
+    <style name="MaterialDialogSheetTemp" parent="Theme.AppCompat.Light.Dialog">
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <style name="MyEditTextThemeRed">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColorHint">@color/text_semidark_gray</item>
+        <item name="colorControlNormal">@color/black</item>
+        <item name="colorControlActivated">@color/black</item>
+        <item name="colorControlHighlight">@color/black</item>
+    </style>
+
+    <style name="MyEditTextThemeGray">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColorHint">@color/text_semidark_gray</item>
+        <item name="colorControlNormal">@color/black</item>
+        <item name="colorControlActivated">@color/text_semidark_gray</item>
+        <item name="colorControlHighlight">@color/text_semidark_gray</item>
+    </style>
+
+    <style name="error_appearance" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="error_appearance_red" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@android:color/holo_red_dark</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="MyRadioButton" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/blue_new</item>
+        <item name="colorControlNormal">@color/light_blue</item>
+        <item name="colorControlActivated">@color/blue_new</item>
+    </style>
+
+    <style name="MyRadioButton_new" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/blue_new</item>
+        <item name="colorControlNormal">@color/blue_new</item>
+        <item name="colorControlActivated">@color/blue_new</item>
+    </style>
+
+    <style name="BottomSheetDialogTheme" parent="BaseBottomSheetDialog" />
+
+    <style name="BaseBottomSheetDialog" parent="@style/Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheet</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="behavior_peekHeight">600dp</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:navigationBarColor">@color/white</item>
+    </style>
+
+    <style name="BottomSheet" parent="@style/Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_round_corner_left_right</item>
+    </style>
+
+</resources>

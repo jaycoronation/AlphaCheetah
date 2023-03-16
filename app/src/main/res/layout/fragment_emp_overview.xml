@@ -1,0 +1,681 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_app"
+        android:orientation="vertical"
+        tools:context="cheetah.alphacapital.reportApp.fragment.EmpOverviewFragment">
+
+        <include
+            android:id="@+id/loading"
+            layout="@layout/layout_loading_white" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <include
+                        android:id="@+id/noInternet"
+                        layout="@layout/layout_no_internet_white" />
+
+                    <LinearLayout
+                        android:id="@+id/llTopSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:orientation="horizontal"
+                        android:padding="14dp">
+
+                        <LinearLayout
+                            android:id="@+id/llSelectEmployee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/border_gray"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="5dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvSelectedEmployee"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/medium"
+                                android:text="Employee"
+                                android:textColor="@color/blue_new"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="3dp"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_arrow_down" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llSelectType"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/border_gray"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingRight="10dp"
+                            android:paddingBottom="5dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvType"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/medium"
+                                android:text="AUM"
+                                android:textColor="@color/blue_new"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="3dp"
+                                android:padding="5dp"
+                                android:src="@drawable/ic_arrow_down" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include
+                        android:id="@+id/noData"
+                        layout="@layout/layout_nodata_white" />
+
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/chart"
+                        android:layout_width="match_parent"
+                        android:layout_height="500dp"
+                        android:layout_margin="10dp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingBottom="6dp">
+
+                            <LinearLayout
+                                android:id="@+id/llEmployeeDetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:padding="20dp">
+
+                                    <LinearLayout
+                                        android:id="@+id/llShortName"
+                                        android:layout_width="70dp"
+                                        android:layout_height="70dp"
+                                        android:background="@drawable/circle_light_gray"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <cheetah.alphacapital.textutils.CustomTextViewBold
+                                            android:id="@+id/tvEmpShortName"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:textSize="25sp" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="20dp"
+                                        android:gravity="start"
+                                        android:orientation="vertical">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvEmployee"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/medium"
+                                            android:textColor="@color/colorPrimaryDark"
+                                            android:textSize="16sp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvDesignation"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/medium"
+                                            android:textColor="@color/text_dark_gray"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.3dp"
+                                android:background="@color/text_light_gray" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="10dp"
+                                android:fontFamily="@font/medium"
+                                android:text="Employee Details"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="6dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="5"
+                                    android:fontFamily="@font/regular"
+                                    android:text="Date Of Joining"
+                                    android:textColor="@color/text_dark_gray"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:fontFamily="@font/regular"
+                                    android:text="    : "
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvDateOfJoin"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="7"
+                                    android:fontFamily="@font/medium"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="6dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="5"
+                                    android:fontFamily="@font/regular"
+                                    android:text="AUM"
+                                    android:textColor="@color/text_dark_gray"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:fontFamily="@font/regular"
+                                    android:text="    : "
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvAUM"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="7"
+                                    android:fontFamily="@font/medium"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="6dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="5"
+                                    android:fontFamily="@font/regular"
+                                    android:text="Last Month's AUM"
+                                    android:textColor="@color/text_dark_gray"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:fontFamily="@font/regular"
+                                    android:text="    : "
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvLastMonthAUM"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="7"
+                                    android:fontFamily="@font/medium"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="6dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="5"
+                                    android:fontFamily="@font/regular"
+                                    android:text="SIP Investment"
+                                    android:textColor="@color/text_dark_gray"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:fontFamily="@font/regular"
+                                    android:text="    : "
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvSip"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="7"
+                                    android:fontFamily="@font/medium"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="6dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="5"
+                                    android:fontFamily="@font/regular"
+                                    android:text="Last Month SIP Investment"
+                                    android:textColor="@color/text_dark_gray"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="5dp"
+                                    android:fontFamily="@font/regular"
+                                    android:text="    : "
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvLastMonthSip"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="7"
+                                    android:fontFamily="@font/medium"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="6dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="5"
+                                    android:fontFamily="@font/regular"
+                                    android:text="New Meeting"
+                                    android:textColor="@color/text_dark_gray"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:fontFamily="@font/regular"
+                                    android:text="    : "
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvMeetingNew"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="7"
+                                    android:fontFamily="@font/medium"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="6dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="5"
+                                    android:fontFamily="@font/regular"
+                                    android:text="Existing Meeting"
+                                    android:textColor="@color/text_dark_gray"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:fontFamily="@font/regular"
+                                    android:text="    : "
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvMeetingExisting"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="7"
+                                    android:fontFamily="@font/medium"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="6dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="5"
+                                    android:fontFamily="@font/regular"
+                                    android:text="Inflow / Outflow	"
+                                    android:textColor="@color/text_dark_gray"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:fontFamily="@font/regular"
+                                    android:text="    : "
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvInflowOutflow"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="7"
+                                    android:fontFamily="@font/medium"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="6dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="5"
+                                    android:fontFamily="@font/regular"
+                                    android:text="Client Reference"
+                                    android:textColor="@color/text_dark_gray"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:fontFamily="@font/regular"
+                                    android:text="    : "
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvClientReference"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="7"
+                                    android:fontFamily="@font/medium"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="6dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="5"
+                                    android:fontFamily="@font/regular"
+                                    android:text="Summary Mail"
+                                    android:textColor="@color/text_dark_gray"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:fontFamily="@font/regular"
+                                    android:text="    : "
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvSummaryMail"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="7"
+                                    android:fontFamily="@font/medium"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="6dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="5"
+                                    android:fontFamily="@font/regular"
+                                    android:text="Day Forward Mail"
+                                    android:textColor="@color/text_dark_gray"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:fontFamily="@font/regular"
+                                    android:text="    : "
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvDayForwardMail"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="7"
+                                    android:fontFamily="@font/medium"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="6dp"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="5"
+                                    android:fontFamily="@font/regular"
+                                    android:text="New Client Converted"
+                                    android:textColor="@color/text_dark_gray"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="5dp"
+                                    android:fontFamily="@font/regular"
+                                    android:text="    : "
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvNewClientConverted"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="7"
+                                    android:fontFamily="@font/medium"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDARTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="10dp"
+                        android:fontFamily="@font/medium"
+                        android:text="DAR"
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvDAR"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false" />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <include
+                android:id="@+id/loadMore"
+                layout="@layout/loading_more_view_white" />
+        </FrameLayout>
+    </LinearLayout>
+</layout>

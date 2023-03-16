@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".reportApp.activity.admin.AddLeadsActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_portfolio" />
+
+        <include
+            android:id="@+id/llLoading"
+            layout="@layout/layout_loading_white" />
+
+        <include
+            android:id="@+id/llNoData"
+            layout="@layout/layout_nodata_white" />
+
+        <include
+            android:id="@+id/llNoInternet"
+            layout="@layout/layout_no_internet_white" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:background="@color/white"
+            android:fitsSystemWindows="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/bg_placeholder" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inputClientName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="8dp"
+                        android:theme="@style/MyEditTextThemeGray">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtClientName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/medium"
+                            android:hint="Client Name*"
+                            android:inputType="textCapWords"
+                            android:maxLines="1"
+                            android:minLines="1"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/text_dark_gray"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/bg_main_dark" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/bg_placeholder" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inputCategoryId"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="8dp"
+                        android:theme="@style/MyEditTextThemeGray">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtCategoryId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/medium"
+                            android:hint="Category Id*"
+                            android:inputType="textCapWords"
+                            android:focusable="false"
+                            android:maxLines="1"
+                            android:minLines="1"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/text_dark_gray"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/bg_main_dark" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/bg_placeholder" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inputReferenceFrom"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="8dp"
+                        android:theme="@style/MyEditTextThemeGray">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtReferenceFrom"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/medium"
+                            android:hint="Reference From*"
+                            android:inputType="textCapWords"
+                            android:maxLines="1"
+                            android:minLines="1"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/text_dark_gray"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/bg_main_dark" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/bg_placeholder" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inputStatus"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:paddingLeft="8dp"
+                        android:theme="@style/MyEditTextThemeGray">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/edtStatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@android:color/transparent"
+                            android:fontFamily="@font/medium"
+                            android:hint="Status*"
+                            android:inputType="textCapWords"
+                            android:maxLines="1"
+                            android:minLines="1"
+                            android:paddingTop="8dp"
+                            android:textColor="@color/text_dark_gray"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/bg_main_dark" />
+
+                <LinearLayout
+                    android:id="@+id/llSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/login_button_border"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="24dp"
+                    android:paddingTop="12dp"
+                    android:paddingRight="24dp"
+                    android:paddingBottom="12dp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/medium"
+                        android:text="Submit"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

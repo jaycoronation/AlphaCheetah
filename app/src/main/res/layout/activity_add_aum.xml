@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_main"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_portfolio" />
+
+        <include layout="@layout/layout_loading_white" />
+
+        <include layout="@layout/layout_no_internet_white" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/llClientSelection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/ic_user_multiple_gray" />
+
+                            <cheetah.alphacapital.textutils.CustomTextInputLayout
+                                android:id="@+id/inputedtClient"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingLeft="8dp"
+                                android:theme="@style/MyEditTextThemeGray">
+
+                                <cheetah.alphacapital.textutils.CustomAppEditText
+                                    android:id="@+id/edtClient"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:background="@android:color/transparent"
+                                    android:focusable="false"
+                                    android:hint="Select Client"
+                                    android:inputType="textMultiLine"
+                                    android:maxLines="1"
+                                    android:minLines="1"
+                                    android:paddingTop="5dp"
+                                    android:textColor="@color/text_dark_gray"
+                                    android:textSize="16sp" />
+
+                            </cheetah.alphacapital.textutils.CustomTextInputLayout>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginTop="8dp"
+                            android:background="@color/bg_main_dark" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/ic_year" />
+
+                        <cheetah.alphacapital.textutils.CustomTextInputLayout
+                            android:id="@+id/inputYear"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="8dp"
+                            android:theme="@style/MyEditTextThemeGray">
+
+                            <cheetah.alphacapital.textutils.CustomAppEditText
+                                android:id="@+id/edtYear"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:focusable="false"
+                                android:hint="Select Year*"
+                                android:importantForAutofill="noExcludeDescendants"
+                                android:inputType="number"
+                                android:maxLines="1"
+                                android:minLines="1"
+                                android:paddingTop="5dp"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="16sp" />
+
+                        </cheetah.alphacapital.textutils.CustomTextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/bg_main_dark" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/ic_year" />
+
+                        <cheetah.alphacapital.textutils.CustomTextInputLayout
+                            android:id="@+id/inputMonth"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="8dp"
+                            android:theme="@style/MyEditTextThemeGray">
+
+                            <cheetah.alphacapital.textutils.CustomAppEditText
+                                android:id="@+id/edtMonth"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:focusable="false"
+                                android:hint="Select Month*"
+                                android:importantForAutofill="noExcludeDescendants"
+                                android:inputType="number"
+                                android:maxLines="1"
+                                android:minLines="1"
+                                android:paddingTop="5dp"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="16sp" />
+
+                        </cheetah.alphacapital.textutils.CustomTextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/bg_main_dark" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/ic_meeting" />
+
+                        <cheetah.alphacapital.textutils.CustomTextInputLayout
+                            android:id="@+id/inputMeetingNew"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="8dp"
+                            android:theme="@style/MyEditTextThemeGray">
+
+                            <cheetah.alphacapital.textutils.CustomAppEditText
+                                android:id="@+id/edtMeetingNew"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:hint="Meeting (New) *"
+                                android:importantForAutofill="noExcludeDescendants"
+                                android:inputType="number"
+                                android:maxLines="1"
+                                android:minLines="1"
+                                android:paddingTop="5dp"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="16sp" />
+
+                        </cheetah.alphacapital.textutils.CustomTextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/bg_main_dark" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/ic_meeting" />
+
+                        <cheetah.alphacapital.textutils.CustomTextInputLayout
+                            android:id="@+id/inputMeetingExisting"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="8dp"
+                            android:theme="@style/MyEditTextThemeGray">
+
+                            <cheetah.alphacapital.textutils.CustomAppEditText
+                                android:id="@+id/edtMeetingExisting"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:hint="Meeting (Existing) *"
+                                android:importantForAutofill="noExcludeDescendants"
+                                android:inputType="number"
+                                android:maxLines="1"
+                                android:minLines="1"
+                                android:paddingTop="5dp"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="16sp" />
+
+                        </cheetah.alphacapital.textutils.CustomTextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/bg_main_dark" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/ic_inflow_outflow" />
+
+                        <cheetah.alphacapital.textutils.CustomTextInputLayout
+                            android:id="@+id/inputInflowOutflow"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="8dp"
+                            android:theme="@style/MyEditTextThemeGray">
+
+                            <cheetah.alphacapital.textutils.CustomAppEditText
+                                android:id="@+id/edtInflowOutflow"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:hint="Inflow Outflow*"
+                                android:importantForAutofill="noExcludeDescendants"
+                                android:inputType="number"
+                                android:maxLines="1"
+                                android:minLines="1"
+                                android:paddingTop="5dp"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="16sp" />
+
+                        </cheetah.alphacapital.textutils.CustomTextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/bg_main_dark" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/ic_sip" />
+
+                        <cheetah.alphacapital.textutils.CustomTextInputLayout
+                            android:id="@+id/inputSip"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="8dp"
+                            android:theme="@style/MyEditTextThemeGray">
+
+                            <cheetah.alphacapital.textutils.CustomAppEditText
+                                android:id="@+id/edtSip"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:hint="SIP*"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:minLines="1"
+                                android:paddingTop="5dp"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="16sp" />
+
+                        </cheetah.alphacapital.textutils.CustomTextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/bg_main_dark" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/ic_client_ref" />
+
+                        <cheetah.alphacapital.textutils.CustomTextInputLayout
+                            android:id="@+id/inputClientReference"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="8dp"
+                            android:theme="@style/MyEditTextThemeGray">
+
+                            <cheetah.alphacapital.textutils.CustomAppEditText
+                                android:id="@+id/edtClientReference"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:hint="Client References*"
+                                android:importantForAutofill="noExcludeDescendants"
+                                android:inputType="number"
+                                android:maxLines="1"
+                                android:minLines="1"
+                                android:paddingTop="5dp"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="16sp" />
+
+                        </cheetah.alphacapital.textutils.CustomTextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/bg_main_dark" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/ic_month_end_aum" />
+
+                        <cheetah.alphacapital.textutils.CustomTextInputLayout
+                            android:id="@+id/inputMonthEndAum"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="8dp"
+                            android:theme="@style/MyEditTextThemeGray">
+
+                            <cheetah.alphacapital.textutils.CustomAppEditText
+                                android:id="@+id/edtMonthEndAum"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:hint="Month End AUM*"
+                                android:inputType="number"
+                                android:maxLines="1"
+                                android:minLines="1"
+                                android:paddingTop="5dp"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="16sp" />
+
+                        </cheetah.alphacapital.textutils.CustomTextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/bg_main_dark" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/ic_sip" />
+
+                        <cheetah.alphacapital.textutils.CustomTextInputLayout
+                            android:id="@+id/inputSummaryMail"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="8dp"
+                            android:theme="@style/MyEditTextThemeGray">
+
+                            <cheetah.alphacapital.textutils.CustomAppEditText
+                                android:id="@+id/edtSummaryMail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:hint="Summary Mail *"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:minLines="1"
+                                android:paddingTop="5dp"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="16sp" />
+
+                        </cheetah.alphacapital.textutils.CustomTextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="8dp"
+                        android:visibility="gone"
+                        android:background="@color/bg_main_dark" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/ic_sip" />
+
+                        <cheetah.alphacapital.textutils.CustomTextInputLayout
+                            android:id="@+id/inputDayForwardMail"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="8dp"
+                            android:theme="@style/MyEditTextThemeGray">
+
+                            <cheetah.alphacapital.textutils.CustomAppEditText
+                                android:id="@+id/edtDayForwardMail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:hint="Day Forward Mail *"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:minLines="1"
+                                android:paddingTop="5dp"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="16sp" />
+
+                        </cheetah.alphacapital.textutils.CustomTextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/bg_main_dark" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/ic_sip" />
+
+                        <cheetah.alphacapital.textutils.CustomTextInputLayout
+                            android:id="@+id/inputNewClientsConverted"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="8dp"
+                            android:theme="@style/MyEditTextThemeGray">
+
+                            <cheetah.alphacapital.textutils.CustomAppEditText
+                                android:id="@+id/edtNewClientsConverted"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:hint="New Clients Converted *"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:minLines="1"
+                                android:paddingTop="5dp"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="16sp" />
+
+                        </cheetah.alphacapital.textutils.CustomTextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/bg_main_dark" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/ic_sip" />
+
+                        <cheetah.alphacapital.textutils.CustomTextInputLayout
+                            android:id="@+id/inputSelfAcquiredAUM"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="8dp"
+                            android:theme="@style/MyEditTextThemeGray">
+
+                            <cheetah.alphacapital.textutils.CustomAppEditText
+                                android:id="@+id/edtSelfAcquiredAUM"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:hint="Self Acquired AUM *"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:minLines="1"
+                                android:paddingTop="5dp"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="16sp" />
+
+                        </cheetah.alphacapital.textutils.CustomTextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="8dp"
+                        android:visibility="gone"
+                        android:background="@color/bg_main_dark" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/ic_sip" />
+
+                        <cheetah.alphacapital.textutils.CustomTextInputLayout
+                            android:id="@+id/inputDAR"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="8dp"
+                            android:theme="@style/MyEditTextThemeGray">
+
+                            <cheetah.alphacapital.textutils.CustomAppEditText
+                                android:id="@+id/edtDAR"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:hint="DAR *"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:minLines="1"
+                                android:paddingTop="5dp"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="16sp" />
+
+                        </cheetah.alphacapital.textutils.CustomTextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/bg_main_dark" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/ic_sip" />
+
+                        <cheetah.alphacapital.textutils.CustomTextInputLayout
+                            android:id="@+id/inputStartInvest"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="8dp"
+                            android:theme="@style/MyEditTextThemeGray">
+
+                            <cheetah.alphacapital.textutils.CustomAppEditText
+                                android:id="@+id/edtStartInvest"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:hint="Start Invest Year"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:minLines="1"
+                                android:paddingTop="5dp"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="16sp" />
+
+                        </cheetah.alphacapital.textutils.CustomTextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/bg_main_dark" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/ic_sip" />
+
+                        <cheetah.alphacapital.textutils.CustomTextInputLayout
+                            android:id="@+id/inputEndInvest"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingLeft="8dp"
+                            android:theme="@style/MyEditTextThemeGray">
+
+                            <cheetah.alphacapital.textutils.CustomAppEditText
+                                android:id="@+id/edtEndInvest"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@android:color/transparent"
+                                android:hint="End Invest Year *"
+                                android:inputType="number"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:minLines="1"
+                                android:paddingTop="5dp"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="16sp" />
+
+                        </cheetah.alphacapital.textutils.CustomTextInputLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/bg_main_dark" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/login_button_border"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="24dp"
+                    android:paddingTop="12dp"
+                    android:paddingRight="24dp"
+                    android:paddingBottom="12dp">
+
+                    <cheetah.alphacapital.textutils.CustomTextViewRegular
+                        android:id="@+id/tvSubmit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

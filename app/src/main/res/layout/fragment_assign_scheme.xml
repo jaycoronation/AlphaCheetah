@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_loading_white" />
+
+
+    <include layout="@layout/layout_no_internet_white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llSerach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <cheetah.alphacapital.textutils.CustomTextInputLayout
+                    android:id="@+id/inputSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="8dp"
+                    android:theme="@style/MyEditTextThemeGray">
+
+                    <cheetah.alphacapital.textutils.CustomAppEditText
+                        android:id="@+id/edtSearch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:hint="Search Scheme.."
+                        android:importantForAutofill="noExcludeDescendants"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:minLines="1"
+                        android:textColor="@color/text_dark_gray"
+                        android:textSize="16sp" />
+
+                </cheetah.alphacapital.textutils.CustomTextInputLayout>
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/ic_serach_gray" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/bg_main_dark" />
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_nodata_white" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSchemeList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:clickable="true"
+            android:clipToPadding="false"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <LinearLayout
+            android:id="@+id/llSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimary"
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingTop="12dp"
+            android:paddingRight="24dp"
+            android:paddingBottom="12dp">
+
+            <cheetah.alphacapital.textutils.CustomTextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Assign"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

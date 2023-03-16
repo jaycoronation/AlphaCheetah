@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="cheetah.alphacapital.reportApp.activity.TaskDetailsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_portfolio" />
+
+        <include layout="@layout/layout_loading_white" />
+
+        <include layout="@layout/layout_no_internet_white" />
+
+        <include layout="@layout/layout_nodata_white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <cheetah.alphacapital.textutils.CustomTextViewRegular
+                        android:id="@+id/txtTaskName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:padding="5dp"
+                        android:text=""
+                        android:textColor="@color/text_dark_gray"
+                        android:textSize="16dp" />
+
+                    <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                        android:id="@+id/txtShowMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:ellipsize="end"
+                        android:minLines="1"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        android:text="Show more"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14dp"
+                        android:visibility="gone" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:background="@color/text_disabled" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        >
+
+                        <cheetah.alphacapital.textutils.CustomTextViewRegular
+                            android:id="@+id/txtReminderDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/viewLineReminderDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:background="@color/text_disabled" />
+
+                    <LinearLayout
+                        android:id="@+id/llReasonForReassign"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <cheetah.alphacapital.textutils.CustomTextViewRegular
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:maxLines="4"
+                            android:minLines="1"
+                            android:text="Reason For Reassign"
+                            android:textColor="@color/black"
+                            android:textSize="14dp" />
+
+                        <cheetah.alphacapital.textutils.CustomTextViewRegular
+                            android:id="@+id/txtReasonForReassign"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxLines="4"
+                            android:minLines="1"
+                            android:text=""
+                            android:textColor="@color/demoo"
+                            android:textSize="14dp" />
+
+                    </LinearLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvAssignTo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:scrollbars="none"
+                        android:visibility="visible" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.3dp"
+                        android:layout_marginTop="6dp"
+                        android:background="@color/text_disabled" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llMainComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_chat_bg"
+                                android:visibility="gone" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:id="@+id/llNoDataComment"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <ImageView
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:padding="5dp"
+                                        android:src="@drawable/ic_no_data"
+                                        android:visibility="gone" />
+
+                                    <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginTop="15dp"
+                                        android:gravity="center"
+                                        android:text="Add Your Comments!"
+                                        android:textColor="@color/colorPrimaryDark"
+                                        android:textSize="18dp" />
+
+                                </LinearLayout>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvComments"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scrollbars="none"
+                                    android:visibility="visible" />
+
+                            </LinearLayout>
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llBottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="10dp">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|bottom"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_border_gray"
+                            android:orientation="horizontal"
+                           >
+
+                            <cheetah.alphacapital.textutils.CustomEditText
+                                android:id="@+id/edtComment"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:ellipsize="end"
+                                android:focusableInTouchMode="true"
+                                android:hint="Add Comment.."
+                                android:importantForAutofill="noExcludeDescendants"
+                                android:inputType="textMultiLine|textCapSentences|textAutoCorrect"
+                                android:maxLines="4"
+                                android:minLines="1"
+                                android:paddingLeft="12dp"
+                                android:paddingTop="10dp"
+                                android:paddingRight="12dp"
+                                android:paddingBottom="10dp"
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/text_dark_gray"
+                                android:textSize="14dp" />
+
+                            <LinearLayout
+                                android:id="@+id/llAttachFile"
+                                android:layout_width="36dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center|bottom"
+                                android:layout_marginBottom="4dp"
+                                android:layout_marginLeft="4dp"
+                                android:layout_marginRight="4dp"
+                                android:gravity="center"
+                                android:visibility="visible"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="28dp"
+                                    android:layout_height="28dp"
+                                    android:src="@drawable/ic_attach_file" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/ivSendComment"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center|bottom"
+                            android:layout_marginLeft="4dp"
+                            android:padding="2dp"
+                            android:src="@drawable/t_send_new" />
+
+                        <ProgressBar
+                            android:id="@+id/progressSend"
+                            android:layout_width="34dp"
+                            android:layout_height="34dp"
+                            android:layout_gravity="bottom"
+                            android:layout_marginLeft="4dp"
+                            android:indeterminate="true"
+                            android:padding="2dp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llSelfTask"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_chat_bg"
+                            android:visibility="gone" />
+
+                        <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            android:gravity="center"
+                            android:text="Comment feature is not enable for self created task."
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="18sp"
+                            android:visibility="visible"
+                            app:textAllCaps="false" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

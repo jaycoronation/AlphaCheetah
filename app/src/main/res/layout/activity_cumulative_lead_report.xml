@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".reportApp.activity.admin.CumulativeLeadReportActivity">
+
+        <include layout="@layout/toolbar_portfolio"
+            android:id="@+id/toolbar"/>
+
+        <include layout="@layout/layout_loading_white"
+            android:id="@+id/llLoading"/>
+
+        <include layout="@layout/layout_no_internet_white"
+            android:id="@+id/llNoInternet"/>
+
+        <LinearLayout
+            android:id="@+id/llMonthYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:paddingLeft="10dp">
+
+            <LinearLayout
+                android:id="@+id/llSelectMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_gray"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                    android:id="@+id/tvMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Month"
+                    android:textColor="@color/tool_bar_bg"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_arrow_down" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSelectYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/border_gray"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                    android:id="@+id/tvYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Year"
+                    android:textColor="@color/tool_bar_bg"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_arrow_down" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:fitsSystemWindows="true">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvLeads"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:clipToPadding="false"
+                    android:focusable="true"
+                    android:paddingTop="6dp"
+                    android:focusableInTouchMode="true"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="vertical"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="100dp" />
+
+                <include layout="@layout/layout_nodata_white"
+                    android:id="@+id/llNoData"/>
+
+                <ProgressBar
+                    android:id="@+id/llMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

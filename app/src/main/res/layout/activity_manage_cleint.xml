@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_portfolio" />
+
+    <include layout="@layout/layout_loading_white" />
+
+    <include layout="@layout/layout_no_internet_white" />
+
+    <LinearLayout
+        android:id="@+id/llMonthYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="12dp">
+
+        <LinearLayout
+            android:id="@+id/llSelectMonth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_gray"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp">
+
+            <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                android:id="@+id/tvMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Month"
+                android:textColor="@color/tool_bar_bg"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="3dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_arrow_down" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llSelectYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/border_gray"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="5dp">
+
+            <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                android:id="@+id/tvYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Year"
+                android:textColor="@color/tool_bar_bg"
+                android:textSize="16sp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="3dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_arrow_down" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:fitsSystemWindows="true">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvClientList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:clipToPadding="false"
+                    android:focusable="true"
+                    android:paddingTop="6dp"
+                    android:focusableInTouchMode="true"
+                    android:nestedScrollingEnabled="false"
+                    android:paddingBottom="100dp" />
+
+                <include layout="@layout/layout_nodata_white" />
+
+                <ProgressBar
+                    android:id="@+id/llMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivAddClient"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="20dp"
+            android:background="@drawable/bg_round_color_primary_dark"
+            android:padding="5dp"
+            android:src="@drawable/ic_add_fab" />
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_loading_white" />
+
+    <include layout="@layout/layout_no_internet_white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_app"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingTop="12dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:id="@+id/llSelectYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_gray"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp"
+                android:paddingTop="5dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="5dp">
+
+                <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                    android:id="@+id/tvYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Select Year"
+                    android:textColor="@color/tool_bar_bg"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_arrow_down" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSelectMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/border_gray"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp"
+                android:paddingTop="5dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="5dp"
+                android:visibility="gone">
+
+                <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                    android:id="@+id/tvMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Select Month"
+                    android:textColor="@color/tool_bar_bg"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_arrow_down" />
+            </LinearLayout>
+
+
+            <!--<ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/ic_arrow_left"/>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_arrow_right"/>-->
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/bg_main_dark"
+            android:visibility="gone" />
+
+        <include layout="@layout/layout_nodata_white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_app"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvListAum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivAddAum"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_round_color_primary_dark"
+        android:padding="5dp"
+        android:src="@drawable/ic_add_fab"
+        android:visibility="gone" />
+</FrameLayout>

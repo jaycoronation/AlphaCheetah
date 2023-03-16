@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="dataGetSet"
+            type="cheetah.alphacapital.reportApp.getset.GetAllCumulativeLeadsReportResponse.LstEmpDataItem" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvEmployeeName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/medium"
+                        android:padding="10dp"
+                        android:text='@{dataGetSet.getEmployeeName}'
+                        android:textColor="@color/black"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/ivEdit"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:padding="3dp"
+                        android:src="@drawable/ic_edit_while"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/ivDelete"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:padding="3dp"
+                        android:src="@drawable/t_delete"
+                        android:tint="@color/black"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/dashboard_border"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="start"
+                            android:padding="5dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:gravity="start"
+                                android:text="Leads Available"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:gravity="start"
+                                android:text=" : "
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvLeadsAvailable"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:gravity="end"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:text='@{String.valueOf((int) dataGetSet.getLeads_Avaliable)}'
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="start"
+                            android:padding="5dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:gravity="start"
+                                android:text="First Meetings"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:gravity="start"
+                                android:text=" : "
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvFirstMeeting"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:gravity="end"
+                                android:text="@{String.valueOf((int) dataGetSet.getFirst_Meeting)}"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="start"
+                            android:padding="5dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:gravity="start"
+                                android:textColor="@color/text_dark_gray"
+                                android:text="No of Clients"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:gravity="start"
+                                android:text=" : "
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvBusinessModel"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:gravity="end"
+                                android:text="@{String.valueOf((int) dataGetSet.getNoOfClients)}"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="start"
+                            android:padding="5dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:gravity="start"
+                                android:text="Conversion (Meet to Client)"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:gravity="start"
+                                android:text=" : "
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvForwardMail"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:gravity="end"
+                                android:text="@{String.valueOf((int) dataGetSet.getConversionMeetToClient)}"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="start"
+                            android:padding="5dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:gravity="start"
+                                android:text="Conversion (Lead to Client)"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:gravity="start"
+                                android:text=" : "
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvPPT"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:gravity="end"
+                                android:text="@{String.valueOf((int) dataGetSet.getConversion_LeadToClient)}"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="start"
+                            android:padding="5dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:gravity="start"
+                                android:text="Leads Still to be converted"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:gravity="start"
+                                android:text=" : "
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvPresentation"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:gravity="end"
+                                android:text="@{String.valueOf((int) dataGetSet.getLeadsStillToBeConverted)}"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="6dp"
+            android:background="@color/text_light_gray"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</layout>

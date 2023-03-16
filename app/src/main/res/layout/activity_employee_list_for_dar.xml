@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_main"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar_portfolio"
+            android:id="@+id/toolbar"/>
+
+        <include layout="@layout/layout_loading_white" />
+
+        <include layout="@layout/layout_no_internet_white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_app"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_nodata_white" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:fitsSystemWindows="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_marginBottom="6dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvEmployee"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:padding="10dp"
+                                android:text="Company Average"
+                                android:textColor="@color/blue_new"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingLeft="12dp"
+                                android:paddingRight="12dp"
+                                android:paddingBottom="12dp">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/medium"
+                                    android:text="Current Month"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:text="Working Days"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/medium"
+                                            android:text=" : "
+                                            android:textColor="@color/black" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvCurrentWorkingDay"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/medium"
+                                            android:text="N.A"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="6dp"
+                                        android:orientation="horizontal">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:text="Working Hour"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/medium"
+                                            android:text=" : "
+                                            android:textColor="@color/black" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvCurrentWorkingHour"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+
+                                            android:fontFamily="@font/medium"
+                                            android:text="N.A"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:fontFamily="@font/medium"
+                                    android:text="Last Month"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:text="Working Days"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/medium"
+                                            android:text=" : "
+                                            android:textColor="@color/black" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvLastWorkingDay"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/medium"
+                                            android:text="N.A"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="6dp"
+                                        android:orientation="horizontal">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:text="Working Hour"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/medium"
+                                            android:text=" : "
+                                            android:textColor="@color/black" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvLastWorkingHour"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/medium"
+                                            android:text="N.A"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:fontFamily="@font/medium"
+                                    android:text="Last 12 Month"
+                                    android:textColor="@color/black"
+                                    android:textSize="14sp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:text="Working Days"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/medium"
+                                            android:text=" : "
+                                            android:textColor="@color/black" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvLast12WorkingDay"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/medium"
+                                            android:text="N.A"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="6dp"
+                                        android:orientation="horizontal">
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/regular"
+                                            android:text="Working Hour"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/medium"
+                                            android:text=" : "
+                                            android:textColor="@color/black" />
+
+                                        <androidx.appcompat.widget.AppCompatTextView
+                                            android:id="@+id/tvLast12WorkingHour"
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:fontFamily="@font/medium"
+                                            android:text="N.A"
+                                            android:textColor="@color/black"
+                                            android:textSize="14sp" />
+
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:background="@color/text_disabled"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvEmployeeList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:focusableInTouchMode="true"
+                        android:nestedScrollingEnabled="false" />
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>

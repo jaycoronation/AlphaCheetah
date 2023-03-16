@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+        <cheetah.alphacapital.textutils.CustomTextViewLight
+            android:id="@+id/txtMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="16sp" />
+
+
+        <LinearLayout
+            android:id="@+id/llActivityType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <cheetah.alphacapital.textutils.CustomTextViewLight
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activity "
+                android:textColor="@color/text_dark_gray"
+                android:textSize="16sp" />
+
+            <cheetah.alphacapital.textutils.CustomTextViewLight
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" : "
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <cheetah.alphacapital.textutils.CustomTextViewLight
+                android:id="@+id/txtActivityType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llRMName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <cheetah.alphacapital.textutils.CustomTextViewLight
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RM Name "
+                android:textColor="@color/text_dark_gray"
+                android:textSize="16sp" />
+
+            <cheetah.alphacapital.textutils.CustomTextViewLight
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" : "
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <cheetah.alphacapital.textutils.CustomTextViewLight
+                android:id="@+id/txtRMName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llClientName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_user_multiple" />
+
+            <cheetah.alphacapital.textutils.CustomTextViewLight
+                android:id="@+id/txtClientName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llRemarksComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="vertical">
+
+            <cheetah.alphacapital.textutils.CustomTextViewLight
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remarks Or Comment :"
+                android:textColor="@color/text_dark_gray"
+                android:textSize="16sp" />
+
+            <cheetah.alphacapital.textutils.CustomTextViewLight
+                android:id="@+id/txtRemarksComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_calender" />
+
+                <cheetah.alphacapital.textutils.CustomTextViewLight
+                    android:id="@+id/txtCreatedDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text=""
+                    android:textColor="@color/text_dark_gray"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:background="@color/text_disabled" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_time" />
+
+                <cheetah.alphacapital.textutils.CustomTextViewLight
+                    android:id="@+id/txthour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text=""
+                    android:textColor="@color/text_dark_gray"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/viewLine"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/text_disabled" />
+
+</LinearLayout>
+
+

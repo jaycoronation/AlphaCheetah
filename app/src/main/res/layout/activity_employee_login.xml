@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_loading_white" />
+
+    <include layout="@layout/layout_no_internet" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="30dp"
+                android:adjustViewBounds="true"
+                android:tint="@color/blue_new"
+                android:src="@drawable/icon_logo_splash_new" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardBackgroundColor="@color/colorPrimaryAlphaPortfolio"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="24dp"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inputEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:theme="@style/MyEditTextThemeRed"
+                        app:errorTextAppearance="@style/error_appearance">
+
+                        <cheetah.alphacapital.textutils.CustomAppEditText
+                            android:id="@+id/edtEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="User Id"
+                            android:inputType="textEmailAddress"
+                            android:maxLines="1"
+                            android:fontFamily="@font/medium"
+                            android:singleLine="true"
+                            android:textColor="@color/blue_new"
+                            android:textColorHint="@color/text_semidark_gray"
+                            android:textCursorDrawable="@drawable/text_cursor_white"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/inputPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:theme="@style/MyEditTextThemeRed"
+                        app:errorTextAppearance="@style/error_appearance"
+                        app:passwordToggleEnabled="true"
+                        app:passwordToggleTint="@color/blue_new">
+
+                        <cheetah.alphacapital.textutils.CustomAppEditText
+                            android:id="@+id/edtPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Password"
+                            android:imeOptions="actionUnspecified"
+                            android:inputType="textPassword"
+                            android:maxLines="1"
+                            android:fontFamily="@font/medium"
+                            android:textColor="@color/blue_new"
+                            android:textColorHint="@color/white"
+                            android:textCursorDrawable="@drawable/text_cursor_white"
+                            android:textSize="16sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/checkBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Remember Me"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        app:buttonTint="@color/white" />
+
+                    <LinearLayout
+                        android:id="@+id/llForgotPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="12dp"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Forgot Password?"
+                            android:fontFamily="@font/medium"
+                            android:textColor="@color/blue_new"
+                            android:textSize="16sp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.3dp"
+                            android:layout_marginTop="1dp"
+                            android:background="@color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llSubmit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/login_button_normal"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingLeft="24dp"
+                        android:paddingRight="24dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/arrow_selector" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

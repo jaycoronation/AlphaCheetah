@@ -1,0 +1,111 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
+android {
+    compileSdkVersion 30
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude("META-INF/*.kotlin_module")
+    }
+
+    defaultConfig {
+        applicationId "cheetah.alphacapital"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 11
+        versionName "2.0"
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+}
+
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == "com.android.support") {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion "26.+"
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.gms:play-services-auth:20.1.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    //implementation 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.github.lzyzsd:circleprogress:1.2.1'
+    implementation 'com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.1'
+    implementation 'com.github.twinkle942910:monthyearpicker:0.0.1'
+    implementation 'com.google.code.gson:gson:2.3.1'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.jakewharton:butterknife:10.0.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.3.1'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'org.sufficientlysecure:html-textview:3.6'
+    implementation project(':springylib')
+    /*implementation files('libs/glide-3.6.1.jar')
+    implementation files('libs/mitsutils-1.0.jar')*/
+    implementation project(':MitsPermissions')
+
+    implementation 'com.google.firebase:firebase-messaging:20.1.6'
+    implementation 'com.google.firebase:firebase-core:17.4.0'
+
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation platform('com.google.firebase:firebase-bom:29.2.1')
+    // Declare the dependencies for the Crashlytics and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-crashlytics'
+
+    implementation 'com.github.dhaval2404:imagepicker-support:1.7.1'
+
+    implementation 'com.github.florent37:inline-activity-result-kotlin:1.0.4'
+
+    implementation "androidx.activity:activity-ktx:1.2.3"
+
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
+
+    implementation 'com.github.jaiselrahman:FilePicker:1.3.2'
+
+    implementation 'com.github.vipulasri:timelineview:1.1.5'
+
+}

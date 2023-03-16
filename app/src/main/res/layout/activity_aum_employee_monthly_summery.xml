@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_portfolio" />
+
+    <include layout="@layout/layout_loading_white" />
+
+    <include layout="@layout/layout_no_internet_white" />
+
+    <include layout="@layout/layout_nodata_white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_app"
+        android:gravity="start"
+        android:orientation="horizontal">
+
+        <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+            android:id="@+id/tvMonthYearName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:background="@drawable/border_gray"
+            android:paddingLeft="10dp"
+            android:paddingTop="6dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="6dp"
+            android:text="Select Employee"
+            android:textColor="@color/tool_bar_bg"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_app">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAUMReports"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nestedScrollingEnabled="false" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

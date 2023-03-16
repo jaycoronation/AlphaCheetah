@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text=""
+                    android:fontFamily="@font/medium"
+                    android:textColor="@color/blue_new"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center|end"
+                    android:layout_marginRight="10dp"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_close_black"
+                    android:visibility="gone" />
+
+
+                <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                    android:id="@+id/tvDone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|end"
+                    android:layout_marginRight="10dp"
+                    android:text="Done"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <cheetah.alphacapital.textutils.CustomEditText
+                android:id="@+id/edtSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/border_gray"
+                android:hint="Search..."
+                android:inputType="textCapWords"
+                android:padding="12dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/regular"
+                                android:text="Captured By"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text=" : "
+                                android:textColor="@color/black" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvCapBy"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/medium"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="5dp">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/regular"
+                                android:text="Lead Name"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text=" : "
+                                android:textColor="@color/black" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvName"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/medium"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/regular"
+                                android:text="Lead Email"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text=" : "
+                                android:textColor="@color/black" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvEmail"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/medium"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/regular"
+                                android:text="Lead Mobile No."
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text=" : "
+                                android:textColor="@color/black" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvMobileNo"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/medium"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:padding="5dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/regular"
+                                android:text="Who Gave The Lead"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text=" : "
+                                android:textColor="@color/black" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvWhoGave"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/medium"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginBottom="12dp"
+                            android:padding="5dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/regular"
+                                android:text="Lead Source"
+                                android:textColor="@color/text_dark_gray"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text=" : "
+                                android:textColor="@color/black" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvLeadSource"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/medium"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <cheetah.alphacapital.textutils.CustomTextViewRegular
+                        android:id="@+id/btnNo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:padding="14dp"
+                        android:text="CANCEL"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <cheetah.alphacapital.textutils.CustomTextViewRegular
+                        android:id="@+id/btnYes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:padding="14dp"
+                        android:text="Done"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "206083243501",
+    "project_id": "alpha-cheetah",
+    "storage_bucket": "alpha-cheetah.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:206083243501:android:590ea6adc9b224d034fbe4",
+        "android_client_info": {
+          "package_name": "cheetah.alphacapital"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "206083243501-9go9crefnc4badg5rirj3e2c8uv4t3dp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "cheetah.alphacapital",
+            "certificate_hash": "618306352f4ba803ab3e0398fdf5aea03120a35b"
+          }
+        },
+        {
+          "client_id": "206083243501-03ih75vh9ig7pn2paut2i6ou40cm1qsf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsgiaeeHk-jEhXWc1Zq-Goi9dmdxX5_RM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "206083243501-03ih75vh9ig7pn2paut2i6ou40cm1qsf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

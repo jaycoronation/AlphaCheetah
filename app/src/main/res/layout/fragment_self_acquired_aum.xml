@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="14dp"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:id="@+id/llSelectYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp"
+                android:background="@drawable/border_gray">
+                <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                    android:id="@+id/tvYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text=""
+                    android:textColor="@color/tool_bar_bg"
+                    android:textSize="16sp"/>
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_arrow_down"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+            <!--<ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="8dp"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/ic_arrow_left"/>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_arrow_right"/>-->
+        </LinearLayout>
+        <include layout="@layout/layout_loading_white" />
+        <include layout="@layout/layout_no_internet_white" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/bg_main_dark" />
+
+        <include layout="@layout/layout_nodata_white"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvListAum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:paddingLeft="6dp"
+                android:paddingRight="6dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivAddAum"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="20dp"
+        android:background="@drawable/bg_round_color_primary_dark"
+        android:padding="5dp"
+        android:src="@drawable/ic_add_fab" />
+</FrameLayout>

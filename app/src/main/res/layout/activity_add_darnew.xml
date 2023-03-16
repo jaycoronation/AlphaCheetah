@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="cheetah.alphacapital.reportApp.activity.admin.AddDARNewActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_portfolio" />
+
+        <include
+            android:id="@+id/loading"
+            layout="@layout/layout_loading_white" />
+
+        <include
+            android:id="@+id/noInternet"
+            layout="@layout/layout_no_internet_white" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/noData"
+                layout="@layout/layout_nodata_white" />
+
+            <cheetah.alphacapital.textutils.CustomTextViewRegular
+                android:id="@+id/tvSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/login_button_border"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Submit DAR"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="16sp"
+                android:visibility="gone" />
+        </FrameLayout>
+    </LinearLayout>
+</layout>

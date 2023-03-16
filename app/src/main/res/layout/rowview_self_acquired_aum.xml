@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <cheetah.alphacapital.textutils.CustomTextViewLight
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:layout_height="wrap_content"
+                    android:text="AUM Amount"
+                    android:textColor="@color/text_dark_gray"
+                    android:textSize="16sp" />
+
+                <cheetah.alphacapital.textutils.CustomTextViewLight
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:text="    : "
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <cheetah.alphacapital.textutils.CustomTextViewRegular
+                    android:id="@+id/tvAumAmount"
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <cheetah.alphacapital.textutils.CustomTextViewLight
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:layout_height="wrap_content"
+                    android:text="Year"
+                    android:textColor="@color/text_dark_gray"
+                    android:textSize="16sp" />
+
+                <cheetah.alphacapital.textutils.CustomTextViewLight
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:text="    : "
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <cheetah.alphacapital.textutils.CustomTextViewRegular
+                    android:id="@+id/tvYear"
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:orientation="horizontal">
+
+                <cheetah.alphacapital.textutils.CustomTextViewLight
+                    android:layout_width="0dp"
+                    android:layout_weight="4"
+                    android:layout_height="wrap_content"
+                    android:text="Note"
+                    android:textColor="@color/text_dark_gray"
+                    android:textSize="16sp" />
+
+                <cheetah.alphacapital.textutils.CustomTextViewLight
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="3dp"
+                    android:text="    : "
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+                <cheetah.alphacapital.textutils.CustomTextViewRegular
+                    android:id="@+id/tvNote"
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_calender"
+                    />
+
+                <cheetah.alphacapital.textutils.CustomTextViewLight
+                    android:id="@+id/tvCreatedDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="12 Feb 19"
+                    android:textColor="@color/text_dark_gray"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/text_disabled" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivEdit"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_edit_while"
+
+        android:layout_gravity="bottom|right"
+        android:layout_margin="12dp"/>
+</FrameLayout>
+
+

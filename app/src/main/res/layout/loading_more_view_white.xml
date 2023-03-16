@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:clipChildren="false"
+        android:fitsSystemWindows="true"
+        android:gravity="bottom|center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llLoadingMore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="5dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:visibility="gone">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_gravity="center"
+                android:background="@color/white"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="15dp">
+
+                <ProgressBar
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layoutDirection="ltr"
+                    android:theme="@style/ProgressBarReverse" />
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <cheetah.alphacapital.textutils.CustomTextViewMedium
+                android:id="@+id/tvLoadingText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:text="Loading..."
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

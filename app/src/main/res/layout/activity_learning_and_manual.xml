@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".reportApp.activity.admin.LearningAndManualActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:background="@android:color/transparent"
+            android:fitsSystemWindows="true"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:contentScrim="@android:color/transparent"
+            app:elevation="0dp">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:fitsSystemWindows="true"
+                android:scaleType="centerCrop"
+                app:contentScrim="@android:color/transparent"
+                app:elevation="0dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlways"
+                app:statusBarScrim="@color/blue_new">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_collapseMode="none"
+                    app:layout_collapseParallaxMultiplier="0.4">
+
+                    <include
+                        android:id="@+id/toolbar"
+                        layout="@layout/toolbar_portfolio" />
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_gravity="bottom"
+                    app:contentInsetEnd="0dp"
+                    app:contentInsetStart="0dp"
+                    app:layout_collapseMode="pin">
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabs"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="top"
+                        android:background="@color/gray_color_new"
+                        app:layout_scrollFlags="scroll|enterAlways"
+                        app:tabGravity="fill"
+                        app:tabIndicatorColor="@color/blue_new"
+                        app:tabIndicatorHeight="2dp"
+                        app:tabMode="scrollable"
+                        app:tabSelectedTextColor="@color/white"
+                        app:tabTextColor="@color/white" />
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <include layout="@layout/layout_loading_white"
+            android:id="@+id/llLoading"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

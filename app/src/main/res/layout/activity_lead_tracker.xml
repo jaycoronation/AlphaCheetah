@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/bg_app"
+        tools:context=".reportApp.activity.admin.LeadTrackerActivity">
+
+        <include layout="@layout/toolbar_portfolio"
+            android:id="@+id/toolbar"/>
+
+        <include layout="@layout/layout_loading_white"
+            android:id="@+id/llLoading"/>
+
+        <include layout="@layout/layout_no_internet_white"
+            android:id="@+id/llNoInternet"/>
+
+        <LinearLayout
+            android:id="@+id/llMonthYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+            android:paddingBottom="12dp">
+
+            <LinearLayout
+                android:id="@+id/llSelectMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_gray"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:visibility="gone"
+                android:paddingBottom="5dp">
+
+                <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                    android:id="@+id/tvMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Month"
+                    android:textColor="@color/tool_bar_bg"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_arrow_down" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSelectYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/border_gray"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/medium"
+                    android:text="Year"
+                    android:textColor="@color/blue_new"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_arrow_down" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nestedScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:fitsSystemWindows="true">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvLeadsList"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        tools:listitem="@layout/rowview_leads_tracker"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:focusableInTouchMode="true"
+                        android:nestedScrollingEnabled="false"
+
+                        android:paddingBottom="100dp" />
+
+                    <ProgressBar
+                        android:id="@+id/llMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|center"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <include layout="@layout/layout_nodata_white"
+                android:id="@+id/llNoData"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivLeadsAdd"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_gravity="bottom|right"
+                android:layout_margin="20dp"
+                android:background="@drawable/bg_round_color_primary_dark"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:padding="6dp"
+                android:src="@drawable/ic_add_fab" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+</layout>

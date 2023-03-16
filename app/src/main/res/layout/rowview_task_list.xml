@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chauthai.swipereveallayout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:dragEdge="right"
+    app:mode="same_level">
+
+    <FrameLayout
+        android:id="@+id/layout_action"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/llActionMain"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llDelete"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@color/tool_bar_bg"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <cheetah.alphacapital.textutils.CustomTextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:text="Delete"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/t_delete"
+                    android:tint="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llEdit"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <cheetah.alphacapital.textutils.CustomTextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:text="Edit"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_edit_while"
+                    android:tint="@color/white"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llComplete"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@color/inner_title"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <cheetah.alphacapital.textutils.CustomTextViewRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:text="Complete"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_done_blue"
+                    android:tint="@color/white"
+                     />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/llPinUnPin"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:background="@color/yellow"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <cheetah.alphacapital.textutils.CustomTextViewRegular
+                    android:id="@+id/txtPinUnPin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:text="Pin"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/ivPinUnPin"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/t_pin_white"
+                   />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/llMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <cheetah.alphacapital.textutils.CustomTextViewRegular
+                    android:id="@+id/txtTaskName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:maxLines="3"
+                    android:minLines="1"
+                    android:text="Ravi Patel"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <cheetah.alphacapital.textutils.CustomTextViewRegular
+                    android:id="@+id/txtUnReadCount"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/bg_round_color_primary_dark"
+                    android:gravity="center"
+                    android:text="12"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/ivPinTask"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/bg_round_color_primary_dark"
+                    android:padding="4dp"
+                    android:src="@drawable/t_pin_white"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/viewLine"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:background="@color/text_disabled" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</com.chauthai.swipereveallayout.SwipeRevealLayout>
+
+
+
+
+
+
+

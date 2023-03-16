@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_app"
+        android:orientation="vertical"
+        tools:context="cheetah.alphacapital.reportApp.fragment.EmpDARReportListFragment">
+
+        <include
+            android:id="@+id/loading"
+            layout="@layout/layout_loading_white" />
+
+        <include
+            android:id="@+id/noInternet"
+            layout="@layout/layout_no_internet_white" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_app">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="start"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:id="@+id/llSelectYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/border_gray"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp">
+
+                    <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                        android:id="@+id/tvYear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Select Year"
+                        android:textColor="@color/tool_bar_bg"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="3dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_arrow_down" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llSelectMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/border_gray"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp">
+
+                    <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                        android:id="@+id/tvMonth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Select Month"
+                        android:textColor="@color/tool_bar_bg"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="3dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_arrow_down" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llFilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/border_gray"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp">
+
+                    <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Filter"
+                        android:textColor="@color/tool_bar_bg"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="3dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_arrow_down" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llSort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/border_gray"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:visibility="gone">
+
+                    <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                        android:id="@+id/tvSort"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Sort"
+                        android:textColor="@color/tool_bar_bg"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="3dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_arrow_down" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <include
+            android:id="@+id/noData"
+            layout="@layout/layout_nodata_white" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDAR"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/llBottomSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <cheetah.alphacapital.textutils.CustomTextViewLight
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Time"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                android:id="@+id/tvTotalTimespent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

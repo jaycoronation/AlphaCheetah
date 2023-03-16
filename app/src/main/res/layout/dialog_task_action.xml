@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:background="@drawable/bg_round_corner_left_right"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_edit_while" />
+
+                <cheetah.alphacapital.textutils.CustomTextViewRegular
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Edit Task"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18dp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/bg_main_dark" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/t_delete" />
+
+                <cheetah.alphacapital.textutils.CustomTextViewRegular
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Delete Task"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18dp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/bg_main_dark" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llComplete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:tint="@color/blue_new"
+                    android:src="@drawable/ic_done_blue" />
+
+                <cheetah.alphacapital.textutils.CustomTextViewRegular
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Complete Task"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18dp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.3dp"
+                android:background="@color/bg_main_dark" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llPin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <ImageView
+                    android:id="@+id/ivPin"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="10dp"
+                    android:tint="@color/colorPrimary"
+                    android:src="@drawable/t_pin_white" />
+
+                <cheetah.alphacapital.textutils.CustomTextViewRegular
+                    android:id="@+id/txtPin"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="Pin Task"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="18dp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

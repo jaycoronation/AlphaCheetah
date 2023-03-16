@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".reportApp.fragment.AssignEmployeeSecondaryFragment">
+
+        <include layout="@layout/layout_loading_white"
+            android:id="@+id/llLoading"/>
+
+        <include layout="@layout/layout_no_internet_white"
+            android:id="@+id/llNoInternet"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_nodata_white"
+                android:id="@+id/llNoData"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvEmployeeList"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
+
+            <LinearLayout
+                android:id="@+id/llSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:background="@drawable/bg_round_corner_blue"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="24dp"
+                android:paddingTop="12dp"
+                android:paddingRight="24dp"
+                android:paddingBottom="12dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Assign"
+                    android:fontFamily="@font/regular"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

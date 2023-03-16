@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_portfolio" />
+
+    <include layout="@layout/layout_loading_white" />
+
+    <include layout="@layout/layout_no_internet_white" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_app"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="12dp">
+
+            <LinearLayout
+                android:id="@+id/llSelectEmployee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/border_gray"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvEmployee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:fontFamily="@font/medium"
+                    android:text="Select Employee"
+                    android:textColor="@color/blue_new"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_arrow_down" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSelectMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_gray"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:visibility="gone">
+
+                <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                    android:id="@+id/tvMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Month"
+                    android:fontFamily="@font/medium"
+                    android:textColor="@color/blue_new"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_arrow_down" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSelectYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/border_gray"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Year"
+                    android:fontFamily="@font/medium"
+                    android:textColor="@color/blue_new"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_arrow_down" />
+            </LinearLayout>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <include layout="@layout/layout_nodata_white"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAUMReports"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nestedScrollingEnabled="false" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAUMReportsTotal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:clipToPadding="false"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:nestedScrollingEnabled="false" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

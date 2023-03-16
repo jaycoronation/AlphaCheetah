@@ -1,0 +1,253 @@
+<layout>
+
+    <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="0dp"
+        android:gravity="center_vertical"
+        app:contentInsetStart="0dp"
+        app:elevation="0dp"
+        app:layout_scrollFlags="scroll|enterAlways">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivHeader"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:scaleType="centerCrop" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:id="@+id/viewStatusBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dip"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginEnd="16dp"
+                    android:gravity="center_vertical"
+                    android:minHeight="?attr/actionBarSize"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/emptyView"
+                        android:layout_width="16dp"
+                        android:layout_height="0dp"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/llBackNavigation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:padding="6dp"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/ic_back_nav"
+                            android:tint="@color/black" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivLogo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="26dp"
+                        android:layout_marginStart="16dp"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/icon_logo_header"
+                        android:tint="@color/black" />
+
+                    <ImageView
+                        android:id="@+id/ivIcon"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:src="@drawable/ic_user"
+                        android:tint="@color/black"
+                        android:visibility="gone" />
+
+                    <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                        android:id="@+id/txtTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvCard"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="2dp">
+
+                        <cheetah.alphacapital.textutils.CustomEditText
+                            android:id="@+id/edtSearch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:drawablePadding="5dp"
+                            android:hint="Search client.."
+                            android:inputType="text"
+                            android:padding="12dp"
+                            android:textColor="@color/black"
+                            android:textColorHint="@color/black"
+                            android:textSize="16sp" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <ImageView
+                        android:id="@+id/ivSerach"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:padding="6dp"
+                        android:src="@drawable/ic_serach_white"
+                        android:tint="@color/black"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/ivClose"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:padding="6dp"
+                        android:src="@drawable/ic_close_black"
+                        android:tint="@color/black"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/ivContactUs"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_email_white"
+                        android:tint="@color/black"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/llNotification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:padding="6dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center_vertical"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/ic_notification"
+                            android:tint="@color/black"/>
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/ivChangePassword"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_change_password"
+                        android:tint="@color/black"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/ivLogout"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:padding="8dp"
+                        android:src="@drawable/ic_logout"
+                        android:tint="@color/black"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:id="@+id/llFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:padding="6dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center_vertical"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/ic_filter_white"
+                            android:tint="@color/black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llCalender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:padding="6dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center_vertical"
+                            android:adjustViewBounds="true"
+                            android:src="@drawable/ic_calender"
+                            android:tint="@color/black" />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvClearNotifications"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Clear"
+                        android:visibility="gone"
+                        android:fontFamily="@font/medium"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+</layout>

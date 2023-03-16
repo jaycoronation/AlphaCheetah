@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="Company\nAverage"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:background="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTotalTask"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:text="Total\nTask"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvClosedTask"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:text="Tasks\nClosed"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAvgDaysTaken"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:text="Avg\nDays\nTaken"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOpenTask"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:text="Open\nTask"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAvgDaysOpen"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
+                android:fontFamily="@font/regular"
+                android:gravity="center"
+                android:text="Avg\nOpen\nDays"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/black" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

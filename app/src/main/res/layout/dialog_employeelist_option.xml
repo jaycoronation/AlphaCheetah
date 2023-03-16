@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/transparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <cheetah.alphacapital.textutils.CustomTextViewMedium
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:text="Select Option"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="17sp" />
+
+                <cheetah.alphacapital.textutils.CustomTextViewRegular
+                    android:id="@+id/tvOverview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:text="Overview"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:background="?attr/selectableItemBackground"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/text_light_gray"/>
+
+                <cheetah.alphacapital.textutils.CustomTextViewRegular
+                    android:id="@+id/tvDARReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:text="Add DAR Report"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:background="?attr/selectableItemBackground"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/text_light_gray"/>
+
+                <cheetah.alphacapital.textutils.CustomTextViewRegular
+                    android:id="@+id/tvAUMReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:text="AUM Report"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:background="?attr/selectableItemBackground"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/text_light_gray"/>
+
+                <cheetah.alphacapital.textutils.CustomTextViewRegular
+                    android:id="@+id/tvAddTarget"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:text="Add Target"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:background="?attr/selectableItemBackground"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/text_light_gray"/>
+
+                <cheetah.alphacapital.textutils.CustomTextViewRegular
+                    android:id="@+id/tvEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:text="Edit"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:background="?attr/selectableItemBackground"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="@color/text_light_gray"/>
+
+                <cheetah.alphacapital.textutils.CustomTextViewRegular
+                    android:id="@+id/tvDelete"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:text="Delete"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:background="?attr/selectableItemBackground"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

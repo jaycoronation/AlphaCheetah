@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".reportApp.activity.admin.TaskSummaryDetailsActivity">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar_portfolio" />
+
+        <include
+            android:id="@+id/llLoading"
+            layout="@layout/layout_loading_white" />
+
+        <include
+            android:id="@+id/llNoInternet"
+            layout="@layout/layout_no_internet_white" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:fitsSystemWindows="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_app"
+                    android:fontFamily="@font/regular"
+                    android:padding="10dp"
+                    android:text="Current Month"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text="Employee Name"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:fontFamily="@font/regular"
+                                android:text=":"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvEmployeeNameCurrent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:text=""
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text="Total Tasks"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:fontFamily="@font/regular"
+                                android:text=":"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvTotalTaskCurrent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text="Tasks Closed"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:fontFamily="@font/regular"
+                                android:text=":"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvTaskCloseCurrent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text="Avg Days Taken"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:fontFamily="@font/regular"
+                                android:text=":"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAvgDaysCurrent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text="Open Tasks"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:fontFamily="@font/regular"
+                                android:text=":"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvOpenTaskCurrent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text="Avg Open Days"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:fontFamily="@font/regular"
+                                android:text=":"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAvgOpenDaysCurrent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_app"
+                    android:fontFamily="@font/regular"
+                    android:padding="10dp"
+                    android:text="Last Month"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/llMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llEmployee"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text="Employee Name"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:fontFamily="@font/regular"
+                                android:text=":"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvEmployeeNameLast"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:text=""
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text="Total Tasks"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:fontFamily="@font/regular"
+                                android:text=":"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvTotalTaskLast"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text="Tasks Closed"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:fontFamily="@font/regular"
+                                android:text=":"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvTaskCloseLast"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text="Avg Days Taken"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:fontFamily="@font/regular"
+                                android:text=":"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAvgDaysLast"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text="Open Tasks"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:fontFamily="@font/regular"
+                                android:text=":"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvOpenTaskLast"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvDTag"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text="Avg Open Days"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:fontFamily="@font/regular"
+                                android:text=":"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAvgOpenDaysLast"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/bg_app"
+                    android:fontFamily="@font/regular"
+                    android:padding="10dp"
+                    android:text="Since Beginning"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal"
+                            android:visibility="visible">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvETag"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text="Employee Name"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:fontFamily="@font/regular"
+                                android:text=":"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvEmployeeNameBegining"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:text=""
+                                android:textColor="@color/colorPrimaryDark"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvGoldTag"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text="Total Tasks"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:fontFamily="@font/regular"
+                                android:text=":"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvTotalTaskBegining"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text="Tasks Closed"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:fontFamily="@font/regular"
+                                android:text=":"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvTaskCloseBegining"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvBTag"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text="Avg Days Taken"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:fontFamily="@font/regular"
+                                android:text=":"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAvgDaysBegining"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvCTag"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text="Open Tasks"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:fontFamily="@font/regular"
+                                android:text=":"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvOpenTaskBegining"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvDTagBegining"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/regular"
+                                android:text="Avg Open Days"
+                                android:textColor="@color/black"
+                                android:textSize="14sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="3dp"
+                                android:fontFamily="@font/regular"
+                                android:text=":"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvAvgOpenDays"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/medium"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="cheetah.alphacapital.reportApp.fragment.EmpNotesFragment">
+
+        <include
+            android:id="@+id/noInternet"
+            layout="@layout/layout_no_internet_white" />
+
+        <include
+            android:id="@+id/loading"
+            layout="@layout/layout_loading_white" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <include
+                android:id="@+id/noData"
+                layout="@layout/layout_nodata_white" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvNotes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:id="@+id/ivAddNote"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_gravity="bottom|right"
+                android:layout_margin="20dp"
+                android:background="@drawable/bg_round_color_primary_dark"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:padding="5dp"
+                android:src="@drawable/ic_add_fab" />
+        </FrameLayout>
+
+    </LinearLayout>
+</layout>

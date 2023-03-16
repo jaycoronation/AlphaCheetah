@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/bg_app"
+            android:padding="2dp">
+            <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+                android:id="@+id/tvYear"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Year"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                android:textSize="16sp"
+                />
+
+            <ImageView
+                android:id="@+id/ivEdit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/ic_edit_while"
+                android:tint="@color/black"
+                android:padding="3dp"
+                android:layout_gravity="center"/>
+
+            <ImageView
+                android:id="@+id/ivDelete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="8dp"
+                android:src="@drawable/t_delete"
+                android:tint="@color/black"
+                android:padding="3dp"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <cheetah.alphacapital.textutils.CustomTextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AUM Amount"
+                android:textColor="@color/text_dark_gray"
+                android:textSize="16sp" />
+
+            <cheetah.alphacapital.textutils.CustomTextViewBold
+                android:id="@+id/tvAUMAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <cheetah.alphacapital.textutils.CustomTextViewRegular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Note"
+                android:textColor="@color/text_dark_gray"
+                android:textSize="16sp" />
+
+            <cheetah.alphacapital.textutils.CustomTextViewBold
+                android:id="@+id/tvNotes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/text_light_gray"
+            android:layout_marginTop="6dp"/>
+
+    </LinearLayout>
+</layout>

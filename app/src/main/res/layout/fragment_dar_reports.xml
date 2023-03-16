@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_loading_white" />
+
+    <include layout="@layout/layout_no_internet_white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@color/bg_app"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:paddingLeft="12dp"
+            android:paddingTop="8dp"
+            android:paddingRight="12dp">
+
+            <LinearLayout
+                android:id="@+id/llSelectYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_gray"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp"
+                android:paddingTop="5dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="5dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Select Year"
+                    android:fontFamily="@font/medium"
+                    android:textColor="@color/blue_new"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:fontFamily="@font/medium"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_arrow_down" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSelectMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/border_gray"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp"
+                android:paddingTop="5dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="5dp"
+                android:visibility="visible">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Select Month"
+                    android:fontFamily="@font/medium"
+                    android:textColor="@color/blue_new"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_arrow_down" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llSelectDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/border_gray"
+                android:orientation="horizontal"
+                android:paddingLeft="8dp"
+                android:paddingTop="5dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="5dp"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSelectedDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Select Date"
+                    android:fontFamily="@font/medium"
+                    android:textColor="@color/blue_new"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:padding="3dp"
+                    android:src="@drawable/ic_arrow_down" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imgFilter"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:padding="3dp"
+                android:src="@drawable/ic_filter_white"
+                android:tint="@color/black"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/bg_main_dark"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:id="@+id/llSerach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginBottom="12dp"
+                android:elevation="8dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <cheetah.alphacapital.textutils.CustomAppEditText
+                        android:id="@+id/edtSearch"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center|left"
+                        android:hint="Search Message.."
+                        android:importantForAutofill="noExcludeDescendants"
+                        android:inputType="text"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_marginRight="8dp"
+                        android:padding="2dp"
+                        android:src="@drawable/ic_serach_gray" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <include layout="@layout/layout_nodata_white" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvDAR"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/bg_app"
+            android:clickable="true"
+            android:clipToPadding="false"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+
+        <cheetah.alphacapital.textutils.CustomTextViewSemiBold
+            android:id="@+id/tvTotalHour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

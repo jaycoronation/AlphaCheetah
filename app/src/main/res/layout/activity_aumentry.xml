@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="cheetah.alphacapital.reportApp.activity.admin.AUMEntryActivity">
+        <include layout="@layout/toolbar_portfolio" android:id="@+id/toolbar"/>
+        <include layout="@layout/layout_loading_white" android:id="@+id/loading"/>
+        <include layout="@layout/layout_no_internet_white" android:id="@+id/noInternet"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <include layout="@layout/layout_nodata_white" android:id="@+id/noData"/>
+
+            <cheetah.alphacapital.textutils.CustomTextViewRegular
+                android:id="@+id/tvSubmit"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Submit AUM"
+                android:background="@drawable/login_button_border"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:textColor="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:layout_gravity="center|bottom"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,11 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="default_elevation">8dp</dimen>
+
+    <dimen name="default_spacing_small">0dp</dimen>
+
+    <dimen name="standard_55">55dp</dimen>
+    <dimen name="standard_105">105dp</dimen>
+    <dimen name="standard_155">155dp</dimen>
+    <dimen name="standard_205">205dp</dimen>
+</resources>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_app"
+        android:orientation="vertical"
+        tools:context="cheetah.alphacapital.reportApp.fragment.EmpDAREmployeeAnalysisFragment">
+
+        <include
+            android:id="@+id/loading"
+            layout="@layout/layout_loading_white" />
+
+        <include
+            android:id="@+id/noInternet"
+            layout="@layout/layout_no_internet_white" />
+
+        <LinearLayout
+            android:id="@+id/llTopSection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bg_app"
+            android:gravity="start"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/llSelectSort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/border_gray"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/medium"
+                    android:text="Sorting"
+                    android:textColor="@color/blue_new"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="3dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_arrow_down" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/noData"
+            layout="@layout/layout_nodata_white" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvReport"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            android:id="@+id/llBottomSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/regular"
+                    android:text="Total Timespent"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTotalTimespent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/semibold"
+                    android:text="00"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/regular"
+                    android:text="Total Percentage"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTotalPercentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/semibold"
+                    android:text="00"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

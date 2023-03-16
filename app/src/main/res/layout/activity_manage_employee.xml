@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_app"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_portfolio" />
+
+    <include layout="@layout/layout_loading_white" />
+
+    <include layout="@layout/layout_no_internet_white" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:fitsSystemWindows="true">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvEmployeeList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clickable="true"
+                    android:clipToPadding="false"
+                    android:focusable="true"
+                    android:paddingTop="6dp"
+                    android:focusableInTouchMode="true"
+                    android:nestedScrollingEnabled="false"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="100dp" />
+
+                <include layout="@layout/layout_nodata_white" />
+
+                <ProgressBar
+                    android:id="@+id/llMore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivAddClient"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="20dp"
+            android:background="@drawable/bg_round_color_primary_dark"
+            android:foreground="?attr/selectableItemBackgroundBorderless"
+            android:padding="5dp"
+            android:src="@drawable/ic_add_fab" />
+
+    </FrameLayout>
+
+</LinearLayout>
